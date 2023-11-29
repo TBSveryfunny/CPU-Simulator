@@ -1,4 +1,4 @@
-# CPU-Simulator
+# CPU-Simulator (original Othamae description)
 
 ## Portfolio Project CS104: Computer Architecture! 
 
@@ -11,3 +11,8 @@ The idea of this project is to design and implement a working Python program tha
 - Fetch and parse initialization values for the Memory Bus from a separate input file.
 - Send CPU instructions and initial Memory Bus values to the CPU and Memory Bus, respectively.
 - Provide console output to the user documenting the stages of input processing.
+
+# My modifications
+
+My primary goal with this project is to implement other MIPS instructions that are not touched upon in the test files provided by the Codecademy platform,
+including SUB, SLT, BNE, JAL, LW, and SW. A second instruction input file was added to demonstrate these additions.
