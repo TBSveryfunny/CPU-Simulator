@@ -15,4 +15,4 @@ The idea of this project is to design and implement a working Python program tha
 # My modifications
 
 My primary goal with this project is to implement other MIPS instructions that are not touched upon in the test files provided by the Codecademy platform,
-including SUB, SLT, BNE, JAL, LW, and SW. A second instruction input file was added to demonstrate these additions.
+namely SUB and SLT. A second instruction input file was added to demonstrate these additions.
