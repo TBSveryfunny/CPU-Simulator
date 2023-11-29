@@ -71,6 +71,10 @@ class CPU:
             self.ADD(inst[1], inst[2], inst[3])
         if inst[0] == 'ADDI':
             self.ADDI(inst[1], inst[2], inst[3])
+        if inst[0] == 'SUB':
+            self.SUB(inst[1], inst[2], inst[3])
+        if inst[0] == 'SLT':
+            self.SLT(inst[1], inst[2], inst[3])
         if inst[0] == 'J':
             self.J(inst[1])
         if inst[0] == 'CACHE':
