@@ -1,7 +1,7 @@
 
 from cpu import CPU
 
-instruction_file = "instruction_input.txt"
+instruction_file = "instruction_input_2.txt"
 data_file = "data_input.txt"
 
 
