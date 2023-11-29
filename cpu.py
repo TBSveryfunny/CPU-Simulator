@@ -98,8 +98,30 @@ class CPU:
         self.write_cache(reg_inx(destination), int(self.search_cache(reg_inx(source)) + int(constant)))
         print("Register ", destination, "has been updated.")
         print("New value: ", self.memory.get_value(reg_inx(destination)))
-  
-        
+
+    def SUB(self, destination, source1, source2):        
+        if self.cache_on:
+            self.search_value(destination)
+            self.search_value(source1)
+            self.search_value(source2)        
+        self.write_memory(reg_inx(destination), int(self.search_cache(reg_inx(source1)) - self.search_cache(reg_inx(source2)))) 
+        self.write_cache(reg_inx(destination), int(self.search_cache(reg_inx(source1)) - self.search_cache(reg_inx(source2))))  
+        print("Register ", destination, "has been updated.")
+        print("New value: ", self.memory.get_value(reg_inx(destination)))
+
+    def SLT(self, destination, source1, source2):        
+        if self.cache_on:
+            self.search_value(destination)
+            self.search_value(source1)
+            self.search_value(source2)
+        if self.search_cache(reg_inx(source1)) < self.search_cache(reg_inx(source2)):
+            self.write_memory(reg_inx(destination), 1)
+            self.write_cache(reg_inx(destination), 1)
+        else:
+            self.write_memory(reg_inx(destination), 0)
+            self.write_cache(reg_inx(destination), 0)
+        print("Register ", destination, "has been updated.")
+        print("New value: ", self.memory.get_value(reg_inx(destination)))
 
     def J(self, counter):
         self.counter = int(counter)
